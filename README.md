@@ -20,3 +20,6 @@ This challenge required determining if a given ransom note could be created out 
 ### Challenge 5 (Strings: Making Anagrams)
 ##### Implementation Language: Python
 For this challenge, two words (letter arrangements) had to be reduced to their common letter subsets so that an anagram could exist between the two words. This was done by taking a count of the letters that existed in both the words, and then determining the difference of them, for the common letters. Then, the sum of those remaining values was returned as the number of letters that needed to be deleted in order for the strings to be anagrams.
+
+### Challenge 6 (Stacks: Balanced Brackets)
+In this challenge, a stack was used to match brackets in an expression, to see if they were balanced (open and closing brackets were used in the correct order). Each time a new opening bracket was found in the expression, its closing bracket equivalent was added to the stack; and each time a matching bracket was found, it is popped from the list. If a non-matching bracket was found, or if the length of the list was not equal to 0 at the end of the expression character iteration, then false was returned, showing that it was not a balanced expression.
