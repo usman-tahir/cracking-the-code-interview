@@ -16,3 +16,7 @@ In this challenge, a contact storing/accessing mini application was created, to 
 ### Challenge 4 (Hash Tables: Ransom Note)
 ##### Implementation Language: Python
 This challenge required determining if a given ransom note could be created out of the words available from a magazine. Each word from the magazine could only map to one word in the ransom note, and so a dictionary was created for both the available words from the magazine and the ransom note, to see if the words (and their quantity available) was sufficient to create the ransom note.
+
+### Challenge 5 (Strings: Making Anagrams)
+##### Implementation Language: Python
+For this challenge, two words (letter arrangements) had to be reduced to their common letter subsets so that an anagram could exist between the two words. This was done by taking a count of the letters that existed in both the words, and then determining the difference of them, for the common letters. Then, the sum of those remaining values was returned as the number of letters that needed to be deleted in order for the strings to be anagrams.

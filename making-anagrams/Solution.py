@@ -1,33 +1,10 @@
-
-def shorter_word(a, b):
-    if len(a) < len(b):
-        return a
-    return b
-
-def longer_word(a, b):
-    if len(a) >= len(b):
-        return a
-    return b
-
-def letter_count(s):
-    letter_counts = {}
-    for letter in list(s):
-        if letter in letter_counts:
-            letter_counts[letter] += 1
-        else:
-            letter_counts[letter] = 1
-    return letter_counts
+from collections import Counter
 
 def number_needed(a, b):
-    print(letter_count(a))
-    print(letter_count(b))
-    total = 0
-    longer = longer_word(a, b)
-    shorter = shorter_word(a, b)
-    for letter in list(longer):
-        if letter in list(shorter):
-            total += 1
-    return ((len(a) + len(b)) - (total * 2))
+    counter_a = Counter(a) # Count of letters in 'a'
+    counter_b = Counter(b) # Count of letters in 'b'
+    counter_a.subtract(counter_b)
+    return sum(abs(count) for count in counter_a.values())
 
 a = input().strip()
 b = input().strip()
